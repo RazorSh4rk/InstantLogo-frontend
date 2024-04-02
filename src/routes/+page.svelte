@@ -37,10 +37,10 @@
 		</div>
 
 		<div class="grid grid-cols-5">
-			<FormComponent></FormComponent>
-			<div class="col-span-2">
+			<div class="col-span-5 md:col-span-2">
 				<Gallery></Gallery>
 			</div>
+			<FormComponent></FormComponent>
 		</div>
 
 		{#if paymentId}

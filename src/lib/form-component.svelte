@@ -12,7 +12,7 @@
 	};
 </script>
 
-<div class="col-span-3">
+<div class="col-span-5 md:col-span-3 ps-2">
 	<Textarea id="prompt" placeholder="Describe your business" rows="10" class="mb-4 resize-none"
 	></Textarea>
 

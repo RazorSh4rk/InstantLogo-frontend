@@ -29,6 +29,6 @@
     ]
 </script>
 
-<div class="pl-6 pb-10">
+<div class="pl-6 pb-6 pr-6">
     <Carousel {images} duration="3000"></Carousel>
 </div>
