@@ -12,9 +12,17 @@
 
 <Card img={imSrc ? imSrc : ''}>
 	{#if imSrc}
-		<Button on:click={download} class="nobg">
-			<DownloadOutline></DownloadOutline>
-		</Button>
+		<div class="grid grid-cols-2 gap-2">
+			<Button on:click={download} class="nobg">
+				PNG
+				<DownloadOutline></DownloadOutline>
+			</Button>
+
+			<Button on:click={download} class="nobg">
+				SVG
+				<DownloadOutline></DownloadOutline>
+			</Button>
+		</div>
 	{:else}
 		<div class="flex flex-col items-center pb-4">
 			<Spinner size="12"></Spinner>

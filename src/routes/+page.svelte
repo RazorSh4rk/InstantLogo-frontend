@@ -1,9 +1,10 @@
 <script>
-	import { Heading, Span } from 'flowbite-svelte';
+	import { Heading, Span, Spinner } from 'flowbite-svelte';
 	import ImgWrapper from '../lib/img-wrapper.svelte';
 	import FormComponent from '../lib/form-component.svelte';
 	import Gallery from '../lib/assets/gallery.svelte';
 	import { page } from '$app/stores';
+	import logo from '$lib/assets/logo.png';
 
 	let generated = [
 		'https://avatars.githubusercontent.com/u/44329147?v=4',
@@ -22,7 +23,7 @@
 	<div class="col-span-5 md:col-span-3">
 		<div class="mb-8 mt-4 text-center">
 			<Heading tag="h1" customSize="text-3xl font-extrabold  md:text-5xl lg:text-6xl">
-				<Span gradient>InstantLogo AI</Span>
+				<Span gradient>LogoMKR</Span>
 			</Heading>
 			<p class="mt-4 text-xl">
 				The simplest, easiest way to create one-off logos for your business 🏢, project 📝, stickers
@@ -47,7 +48,12 @@
 			{#if !purchaseSuccess}
 				<div class="grid grid-cols-3">
 					<p></p>
-					<div class="text-center">Waiting for payment to process</div>
+					<div class="text-center">
+						<div class="grid grid-cols-3">
+							<Spinner size={12}></Spinner>
+							<span class="col-span-2 text-xl">Waiting for payment to process</span>
+						</div>
+					</div>
 					<p></p>
 				</div>
 			{:else}
